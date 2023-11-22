@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>CodeTech - Soluções em tecnologia</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body>
+       
+        <section id="txt-login">
+           
+            <img src="imagem/logo.jpeg" alt="login">
+            
+            <form name="Frm_Login" method="post" action="login.jsp">
+                
+                <p>
+                    <input type="text" name="login" required="required" placeholder="Login:"> 
+                 </p>
+                <p>
+                    <input type="password" name="senha" required="required" placeholder="Senha:">  
+                </p>
+                <button  type="submit" name="entrar" ><b>Entrar</b></button> 
+                            
+            </form>
+            
+        </section> 
+        <script>
+        document.getElementById("Frm_Login").addEventListener("submit", function (e) {
+            e.preventDefault();
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("senha").value;
+            
+        });
+    </script>
+    </body>
+</html>

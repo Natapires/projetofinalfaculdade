@@ -1,0 +1,506 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 30 de out. de 2023, 18:59:59
+    Author     : Bruno Salles
+*/
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Verdana';}
+
+
+#txt-area{
+    display: inline-block;
+    position: relative;
+    max-width: 80%; 
+    width: 100%; 
+    height: 50px; 
+    margin-top:0; 
+    margin-bottom: 15px; 
+    box-shadow: 0px 5px 16px 1px black; 
+    padding-left: 1%;
+    border: 0px;
+    font-size: 20px;
+}
+
+#txt-login{
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 30%; 
+    margin-right: 30%;
+    text-align: center;
+    position: absolute;
+    border-radius: 2mm;
+}
+#txt-login{
+    width: 38%; 
+    position: absolute; 
+    float: left;
+    opacity: 1; 
+    padding: 2%; 
+    top: 1%; 
+    min-height: 400px;
+    z-index: 999;
+}
+#txt-login img{
+    width: 100%;
+    opacity: 1;
+}
+#txt-login form input{
+    display: inline-block;
+    position: relative;
+    max-width: 80%; 
+    width: 100%; 
+    height: 50px; 
+    margin-top:0; 
+    margin-bottom: 15px; 
+    box-shadow: 0px 5px 16px 1px black; 
+    padding-left: 1%;
+    border: 0px;
+    font-size: 20px
+}
+#txt-login form textarea {
+    max-width: 100%; 
+    width: 99%; 
+    border: solid #777 1px; 
+    padding-left: 1%;
+    min-height: 100px;
+    
+}
+#txt-login form button {
+    width: 20%; height: 10%;  
+    background-color: red ;
+    float: left;
+    color:#fff; 
+    font-size: 12px; 
+    padding: 10px 5px 10px 5px;
+    margin-left: 70%;
+    border-radius: 1.5mm;
+    border:solid red 1px;
+}
+#txt-login form button:hover{
+    background-color: white;
+    color: red;
+}
+
+#txt-menu {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+nav{
+    background-color: whitesmoke;  
+    box-shadow: 0px 2px 16px 0px black;
+    color: black;
+}
+
+nav li{
+    display: inline-block
+}
+nav li:hover{
+    color:red;
+}
+
+nav li a{
+    margin: auto;
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    font-size: 18px;
+    
+}
+
+
+nav li a:hover{
+    background-color:#d5d5d5;
+    color:red;
+}
+
+.drop-menu{
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px black;
+    
+}
+.drop-menu a{
+    display: block;
+    color: black;
+}
+
+.dropdown:hover .drop-menu {
+    display: block;
+    background-color: whitesmoke;
+    color: white;
+}
+
+center {
+    display: block;
+    text-align: -webkit-center;
+    padding: 2%;
+       
+}
+center img{
+    width: 40%;
+}
+.drop-menu a{
+	display:block;
+}
+.drop-menu,.submenu{
+	padding:15px;
+}
+.submenu{
+    width:150px;
+    opacity:0;
+    height: auto;
+    background-color:#1A1A1A;
+    position:absolute;
+    left:110px;
+    box-shadow: 0px 8px 16px 0px black;
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.6s cubic-bezier(0.5, 1.7, 0.5, 1.5);
+    -webkit-transform: rotateX(90deg);
+    
+    
+	
+}
+.cliente:hover .submenu{
+    top:0;
+    display: block;
+    background-color: whitesmoke;
+    opacity:1;
+    -webkit-transform: rotateX(0);
+       
+}
+
+.produto:hover .submenu{
+    top:80px;
+    display: block;
+    background-color: whitesmoke;
+    opacity:1;
+    -webkit-transform: rotateX(0);
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 99%;
+    background: whitesmoke;
+    box-shadow: 0px 8px 16px 0px black;
+    
+}
+.main-content{
+    display: flex;
+}
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.box h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+.box .content:after{
+    position: absolute;
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #f12020;
+    top: -10px;
+}
+.box .content:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: -10px;
+}
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+.left .content .social a{
+    padding: 0 2px;
+}
+.left .content .social a span{
+    width: 40px;
+    height: 40px;
+    background: #1a1a1a;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.left .content .social a span:hover{
+    background: #f12020;
+}
+.left .content p{
+    text-align: justify;
+}
+.center .content .fas{
+    font-size: 23px;
+    background: #1a1a1a;
+    width: 45px;
+    height: 45px ;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.center .content .fas:hover{
+    background: #f12020;
+}
+.center .content .text{
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.center .content .phone{
+    margin: 10px 0;
+}
+.center .content .msg{
+    margin-top: 10px;
+}
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 17px;
+    background: white;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+.right form input{
+    height: 35px;
+}
+.right form input:focus,
+.right form textarea:focus{
+    outline-color: #3498db;
+}
+.right form .text{
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #656565;
+}
+.right form .btn{
+    margin-top: 10px;
+}
+.right form .btn button{
+    height: 40px;
+    width: 100%;
+    background: #f12020;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+.right form .btn button:hover{
+    background: white;
+    color: red;
+}
+.bottom .center{
+    padding: 5px;
+    font-size: 15px;
+    background: #151515;
+    text-align: center;
+}
+.bottom .center span{
+    color: #656565;
+}
+.bottom .center a{
+    color: #f12020;
+    text-decoration: none;
+}
+.bottom .center a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width: 900px){
+    footer{
+        position: fixed;
+        bottom: 0px;
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box{
+        margin: 5px 0;
+    }
+}
+
+#cad-cli{
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-left: 30%; 
+    margin-right: 30%;
+    margin-bottom: 0;
+    position: absolute;
+    box-shadow: 1px 2px 12px 1px black;
+    
+    
+}
+#cad-cli{
+    width: 38%; 
+    position: absolute; 
+    float: left;
+    opacity: 1; 
+    padding:20px;   
+    top: 1%; 
+    min-height: 400px;
+    z-index: 999;
+    text-align: center;
+}
+#cad-cli img{
+    width: 30%;
+}
+#cad-cli form input{
+    display: inline-block;
+    position: relative;
+    max-width: 80%; 
+    width: 100%; 
+    height: 50px; 
+    margin-top:0; 
+    margin-bottom: 15px; 
+    box-shadow: 0px 5px 16px 1px black; 
+    padding-left: 1%;
+    border: 0px;
+    font-size: 20px;
+    
+}
+#cad-cli form textarea {
+    max-width: 100%; 
+    width: 99%; 
+    border: solid #777 1px; 
+    min-height: 100px;
+    display: inline-block;
+    position: relative;
+    max-width: 80%; 
+    width: 100%; 
+    height: 50px; 
+    margin-top:0; 
+    margin-bottom: 15px; 
+    box-shadow: 0px 5px 16px 1px black; 
+    padding-left: 1%;
+    border: 0px;
+    font-size: 20px;
+    
+}
+
+    
+
+.Excluir {
+    width: 20%; 
+    height: 10%;  
+    background-color: red ;
+    float: left;
+    color:#fff; 
+    margin-left: 10%;
+    align-items: start;
+    font-size: 14px; 
+    padding: 10px 5px 10px 5px;
+    border-radius: 1.5mm;
+    border:solid red 1px;
+}
+.Alterar{
+    width: 20%; 
+    height: 10%;  
+    background-color: red ;
+    float: left;
+    color:#fff; 
+    margin-left: 10%;
+    align-items: start;
+    font-size: 14px; 
+    padding: 10px 5px 10px 5px;
+    border-radius: 1.5mm;
+    border:solid red 1px;
+}
+#cad-cli form button:hover{
+    background-color: white;
+    color: red;
+}
+.Limpar{
+     width: 20%; 
+    height: 10%;  
+    background-color: red ;
+    float: left;
+    color:#fff; 
+    margin-left: 2%;
+    align-items: start;
+    font-size: 14px; 
+    padding: 10px 5px 10px 5px;
+    border-radius: 1.5mm;
+    border:solid red 1px;
+    
+}
+.Limpar:hover{
+     background-color: white;
+    color: red;
+}
+.Excluir:hover{
+     background-color: white;
+    color: red;    
+}
+.bntTrsp{
+    width: 20%; 
+    height: 10%;  
+    background-color: red ;
+    float: left;
+    color:#fff; 
+    margin-left: 10%;
+    margin-bottom: 10px;
+    align-items: start;
+    font-size: 14px; 
+    padding: 10px 5px 10px 5px;
+    border-radius: 1.5mm;
+    border:solid red 1px;    
+}
+.btnTrsp{
+     background-color: white;
+    color: red;
+}
+.cadastro{
+    width: 20%; 
+    height: 10%;  
+    background-color: red ;
+    float: left;
+    color:#fff; 
+    margin-left: 10%;
+    margin-bottom: 10px;
+    align-items: start;
+    font-size: 14px; 
+    padding: 10px 5px 10px 5px;
+    border-radius: 1.5mm;
+    border:solid red 1px;      
+}
+.cadastro:hover{
+     background-color: white;
+    color: red;
+}
+.voltar{
+   text-align: left;
+   width: 100px;
+}
+
+span img{
+  margin-top: 8px; 
+}
+
+h2{
+    color: red;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+

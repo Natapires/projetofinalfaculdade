@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Problema/Necessidade: Criar um cadastro de clientes 
+Data: 14/09/2023
+Autor: Adilson
+Projeto: Controle de Clientes
+
+-->
+<html>
+    <head>
+        <title>CodeTech - Cadastro Produ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    </head>
+    <body>
+        <section id="cad-cli">
+            <div class="voltar"><a href="menu.jsp"><img src="imagem/voltar.png"></a></div>
+            
+            <a href="menu.jsp"><img src="imagem/logo.jpeg" alt="login" ></a>
+            <form name="Frm_Login" method="post" action="cad_prod.jsp">
+                    
+                
+                <p> 
+                    <textarea   name="descricao" required="required" placeholder="Descrição *"></textarea>
+                 </p>
+                 <p>
+                    <input type="number" name="qtd" required="required" placeholder="Quantidade *"> 
+                 </p>
+                 <p>
+                    <input type="text" name="tp_unit" required="required" placeholder="Tipo Unitário *"> 
+                 </p>
+                 <p>
+                    <input type="number" name="valor" required="required" placeholder="Valor (R$) *" step="0.01" inputmode="decimal" >
+                </p>
+                 <p>
+                     <textarea  name="especif_tec"  required="required" placeholder="Especificação Técnica *"></textarea> 
+                 </p> 
+                                  
+                 <button  type="submit" class="cadastro" ><b>Cadastrar</b></button>
+                 <button type="reset" class="Limpar" ><b>Limpar</b></button>
+                  
+                            
+            </form>
+        </section> 
+    </body>
+</html>

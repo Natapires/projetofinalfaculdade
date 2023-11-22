@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Problema/Necessidade: Criar um cadastro de clientes 
+Data: 14/09/2023
+Autor: Adilson
+Projeto: Controle de Clientes
+
+-->
+<html>
+    <head>
+        <title>CodeTech - Cadastro Clientes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    </head>
+    <body>
+        <section id="cad-cli">
+            <div class="voltar"><a href="menu.jsp"><img src="imagem/voltar.png"></a></div>
+            
+            <a href="menu.jsp"><img src="imagem/logo.jpeg" alt="login" ></a>
+            <form name="Frm_Login" method="post" action="cad_cli.jsp">
+                    
+                
+                <p>
+                    <input type="text" name="cpf_cnpj" required="required" placeholder="Informe CPF/CNPJ *"> 
+                 </p>
+                 <p>
+                    <input type="text" name="Rz_social" required="required" placeholder="Razão Social *"> 
+                 </p>
+                 <p>
+                     <br><label ><b>Endereço:</b></label><br><br>
+                    <input type="text" name="endereco" required="required" placeholder="Endereço *"> 
+                     <input type="text" name="numero" required="required" placeholder="Número *"> 
+                 </p>
+                 <p>
+                    <input type="text" name="cep" required="required" placeholder="Cep *"> 
+                 </p>
+                 <p>
+                    <input type="text" name="bairro" required="required" placeholder="Bairro/Distrito *"> 
+                 </p>
+                 <p>
+                    <input type="text" name="municipio" required="required" placeholder="Município *"> 
+                 </p> 
+                 <p>
+                     <input type="text" name="uf" required="required" placeholder="UF *">
+                 </p>
+                 <p><br><label ><b>Contato:</b></label><br><br>
+                    <input type="email" name="email" required="required" placeholder="Email *"> 
+                 </p>
+                 <p>
+                    <input type="tel" name="telefone" required="required" placeholder="Telefone *"> 
+                 </p>
+                 <p>
+                    <input type="tel" name="celular" required="required" placeholder="Celular *"> 
+                 </p>
+                 
+                 <button  type="reset" class="Limpar" ><b>Limpar</b></button>
+                 <button  type="submit" class="cadastro" ><b>Cadastrar</b></button> 
+                            
+            </form>
+        </section> 
+    </body>
+</html>
